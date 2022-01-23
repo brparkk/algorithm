@@ -2,4 +2,4 @@
 🦄 Algorithm &amp; coding test
 
 ## Contents
-- 신고 결과 받기
+- Lv1. 신고 결과 받기
