@@ -2,4 +2,5 @@
 🦄 Algorithm &amp; coding test
 
 ## Contents
-- Lv1. 신고 결과 받기
+1. Lv1. 신고 결과 받기
+2. k번째 수
