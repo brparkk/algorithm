@@ -21,3 +21,8 @@ function solution(str) {
 
   return answer.join("");
 }
+
+//other solution
+function solution(s) {
+  return s.split("").sort().reverse().join("");
+}
