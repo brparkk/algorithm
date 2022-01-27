@@ -10,7 +10,7 @@ function solution(numbers) {
   return result;
 }
 
-//다른 사람의 풀이
+//다른 사람의 풀이(1)
 function solution(numbers) {
   return 45 - numbers.reduce((cur, acc) => cur + acc, 0);
 }
