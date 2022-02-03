@@ -25,7 +25,7 @@ function solution(n, losts, reserve) {
   return n - (losts.length - findTrueVale);
 }
 
-//다른사람 풀이
+//다른 풀이
 const solution = (n, lost, reserve) => {
   let Lost = lost.filter((a) => !reserve.includes(a)); //여벌이 없는데 체육복을 잃어버린 학생
   let Reserve = reserve.filter((a) => !lost.includes(a)); //여벌이 있는데 체육복을 잃어버린 학생
@@ -36,6 +36,7 @@ const solution = (n, lost, reserve) => {
       //앞, 뒤번호 학생 중 여벌이 있는지 확인
       let extra = Reserve.find(
         (reserveStudent) => Math.abs(reserveStudent - lostStudent) <= 1
+        //음수가 나올 수 있으므로 Math.abs()로 처리
       );
       //여벌이 없다면
       if (!extra) return true;
