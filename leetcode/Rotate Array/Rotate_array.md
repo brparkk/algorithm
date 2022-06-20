@@ -28,7 +28,10 @@ Constraints:
 0 <= k <= 10<sup>5</sup>
 
 ### 나의 풀이
+(1) 1차 풀이 - fail
 ```javascript
-
+var rotate = function(nums, k) {
+    nums.sort((a,b) => b-k).sort((a,b) => {if(a<0 && b<0){return b-a}})
+};
 
 ```
