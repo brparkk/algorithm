@@ -23,9 +23,9 @@ rotate 2 steps to the right: [3,99,-1,-100]
 
 Constraints:
 
-`1 <= nums.length <= 10<sub>5</sub>`<br/>
-`-2^31 <= nums[i] <= 2^31 - 1`
-`0 <= k <= 10^5`
+`1 <= nums.length <= 10^5^`<br/>
+`-2^31^ <= nums[i] <= 2^31^ - 1`<br/>
+`0 <= k <= 10^5^`
 
 ### 나의 풀이
 ```javascript
