@@ -33,5 +33,5 @@ Constraints:
 var rotate = function(nums, k) {
     nums.sort((a,b) => b-k).sort((a,b) => {if(a<0 && b<0){return b-a}})
 };
-
 ```
+이유 : 왼쪽으로 보낸다고 잘못 생각했다.. 오른쪽으로 한 칸씩 이동하는 것.
