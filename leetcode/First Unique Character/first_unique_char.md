@@ -23,7 +23,7 @@ Output: -1
 
 ### Constraints:
 
-1 <= s.length <= 10<sub>5</sub> <br/>
+1 <= s.length <= 10<sup>5</sup> <br/>
 s consists of only lowercase English letters.
 
 ### 나의 풀이
