@@ -29,7 +29,7 @@ Output: [0,1]
 -10<sup>9</sup> <= target <= 10<sup>9</sup>
 
 ### 풀이
-(1)
+(1)Fail
 ```javascript
 const output= [];
 
@@ -43,4 +43,23 @@ nums.forEach((num, i, arr)=> {
       output.concat(i);
  	 }
 })
+```
+(2)Success - 그런데 이중 for문이 맘에 들지 않다..
+```
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(nums, target) {
+    let output =[];
+    for(let i=0; i<nums.length; i++){
+      for(let k=i+1; k<nums.length; k++){
+        if(nums[i] + nums[k] === target){
+         output = [i, k];
+        }
+      }
+    }
+    return output;
+};
 ```
