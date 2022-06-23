@@ -31,5 +31,16 @@ Output: [0,1]
 ### 풀이
 (1)
 ```javascript
+const output= [];
 
+nums.forEach((num, i, arr)=> {
+  console.log(num)
+  console.log(arr[i])
+
+    if(num + arr[i] === target) {
+      if(num === arr[i]) return;
+      output.concat(nums.indexOf(num));
+      output.concat(i);
+ 	 }
+})
 ```
