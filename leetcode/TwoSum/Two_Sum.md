@@ -45,7 +45,7 @@ nums.forEach((num, i, arr)=> {
 })
 ```
 (2)Success - 그런데 이중 for문이 맘에 들지 않다..
-```
+```javascript
 /**
  * @param {number[]} nums
  * @param {number} target
