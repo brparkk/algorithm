@@ -25,37 +25,9 @@ All the integers in nums are unique.
 nums is sorted in ascending order.
 
 ### 풀이
-(1)Fail
-```javascript
-const output= [];
 
-nums.forEach((num, i, arr)=> {
-  console.log(num)
-  console.log(arr[i])
-
-    if(num + arr[i] === target) {
-      if(num === arr[i]) return;
-      output.concat(nums.indexOf(num));
-      output.concat(i);
- 	 }
-})
-```
-(2)Success - 그런데 이중 for문이 맘에 들지 않다..
 ```javascript
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number[]}
- */
-var twoSum = function(nums, target) {
-    let output =[];
-    for(let i=0; i<nums.length; i++){
-      for(let k=i+1; k<nums.length; k++){
-        if(nums[i] + nums[k] === target){
-         output = [i, k];
-        }
-      }
-    }
-    return output;
+var search = function(nums, target) {
+    return nums.indexOf(target);
 };
 ```
