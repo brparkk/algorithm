@@ -60,4 +60,4 @@ return nums.some(duplicate);
 #### 사용한 개념
 > Array.prototype.some() : https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/some
 > Array.prototype.includes() : https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
-> Array.prototype.indexOf() : Array.prototype.indexOf()
+> Array.prototype.indexOf() : [Array.prototype.indexOf()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
