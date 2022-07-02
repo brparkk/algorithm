@@ -28,6 +28,17 @@ Output: true
 ### 풀이
 
 ```javascript
-
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+var containsDuplicate = function(nums) {
+    arr = nums.filter((num, idx) => nums.indexOf(num) !== idx);
+    if(arr.length > 0){
+      return true
+    }else{
+      return false
+    }
+};
 ```
 
