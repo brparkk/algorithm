@@ -41,4 +41,4 @@ var containsDuplicate = function(nums) {
     }
 };
 ```
-
+![Screen Shot 2022-07-02 at 1 44 11 PM](https://user-images.githubusercontent.com/88074487/176986838-fb50775e-f1ff-48f5-8adf-40b6d555f9af.png)
