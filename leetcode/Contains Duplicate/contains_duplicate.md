@@ -58,6 +58,6 @@ return nums.some(duplicate);
 ![Screen Shot 2022-07-02 at 2 54 50 PM](https://user-images.githubusercontent.com/88074487/176988506-164c4b4d-0902-4f75-97a5-8fbbdafad3f0.png)
 
 #### 사용한 개념
-> Array.prototype.some() : [Array.prototype.some()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
-> Array.prototype.includes() : [Array.prototype.includes()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
-> Array.prototype.indexOf() : [Array.prototype.indexOf()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
+> Array.prototype.some() : [Array.prototype.some()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/some)<br/>
+> Array.prototype.includes() : [Array.prototype.includes()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)<br/>
+> Array.prototype.indexOf() : [Array.prototype.indexOf()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)<br/>
