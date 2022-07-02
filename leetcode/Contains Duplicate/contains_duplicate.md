@@ -41,5 +41,23 @@ var containsDuplicate = function(nums) {
     }
 };
 ```
+![Screen Shot 2022-07-02 at 1 44 11 PM](https://user-images.githubusercontent.com/88074487/176986838-fb50775e-f1ff-48f5-8adf-40b6d555f9af.png)
 
- 2022-07-02 at 1 44 11 PM](https://user-images.githubusercontent.com/88074487/176986838-fb50775e-f1ff-48f5-8adf-40b6d555f9af.png)
+메모리 줄이기 성공
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+var containsDuplicate = function(nums) {
+const duplicate = (currValue, index, arr) => index !== arr.indexOf(currValue) && arr.includes(currValue);
+return nums.some(duplicate);
+
+};
+```
+![Screen Shot 2022-07-02 at 2 54 50 PM](https://user-images.githubusercontent.com/88074487/176988506-164c4b4d-0902-4f75-97a5-8fbbdafad3f0.png)
+
+#### 사용한 개념
+> Array.prototype.some() : https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/some
+> Array.prototype.includes() : https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
+> Array.prototype.indexOf() : Array.prototype.indexOf()
