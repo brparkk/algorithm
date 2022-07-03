@@ -65,6 +65,12 @@ Expected 1
 접근방식이 잘못된것 같다.
 words 배열에서 word2의 순서를 변경하지 않고, 문자열의 요소로 word1을 만들 수 있는지, word3과 word2를 비교, 비교, 비교... 이런식으로..
 
-```javascript
+(2)
+이 문제는 DP 개념을 활용한 문제이다.
+여기서 DP란 Dynamic Programming (동적계획법)으로, 하나의 큰 문제를 여러 개의 작은 문제로 나누어서 그 결과를 저장하여 다시 큰 문제를 해결할 때 사용하는 개념을 뜻한다.
 
+```javascript
+var longestStrChain = function(words) {
+ 
+};
 ```
