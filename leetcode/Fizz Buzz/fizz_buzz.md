@@ -54,8 +54,6 @@ var fizzBuzz = function(n) {
 };
 ```
 <img width="1172" alt="Screen Shot 2022-07-03 at 7 17 25 PM" src="https://user-images.githubusercontent.com/88074487/177035249-1f3cad3c-4152-46f1-800f-8c898b0120fc.png">
-(2)
 
-```javascript
-e
-```
+<img width="256" alt="Screen Shot 2022-07-03 at 7 19 19 PM" src="https://user-images.githubusercontent.com/88074487/177035315-1f8377f8-e3dc-4b78-986a-ef0ad215e468.png">
+
