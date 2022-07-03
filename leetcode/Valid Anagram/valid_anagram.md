@@ -46,6 +46,8 @@ var isAnagram = function(s, t) {
     }
 };
 ```
-> error case
+error case
+```
 const s = "aacc"
 const t = "ccac"
+```
