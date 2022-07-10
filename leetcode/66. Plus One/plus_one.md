@@ -63,4 +63,20 @@ var plusOne = function(digits) {
 };
 ```
 => run time error
+(2)
+```javascript
+/**
+ * @param {number[]} digits
+ * @return {number[]}
+ */
+var plusOne = function(digits) {
+    let num = Number(digits.join(""))+1;
+    let output =[];
+    output = num.toString().split("");
+
+    return output.map(n => parseInt(n))
+};
+```
+Number로 제대로 전환이 안된다. 이유를 모르겠음
+<img width="458" alt="Screen Shot 2022-07-10 at 7 18 48 PM" src="https://user-images.githubusercontent.com/88074487/178140757-ae416477-cfb5-4246-8b34-7a062caaf5dd.png">
 
