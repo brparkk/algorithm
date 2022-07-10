@@ -22,6 +22,7 @@ Constraints
 - nums is sorted in non-decreasing order.
 
 ### Solution
+(1) 👺 신나서 풀었지만 이진트리로 풀어야했던,,
 ```javascript
 /**
  * @param {number[]} nums
@@ -30,4 +31,8 @@ Constraints
 var sortedSquares = function(nums) {
     return nums.map(num => Math.pow(num, 2)).sort((a, b) => a-b)
 };
+```
+(2) 🖐 Binary Search로 풀어야함
+```javascript
+
 ```
