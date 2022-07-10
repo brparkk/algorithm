@@ -79,4 +79,24 @@ var plusOne = function(digits) {
 ```
 Number로 제대로 전환이 안된다. 이유를 모르겠음
 <img width="458" alt="Screen Shot 2022-07-10 at 7 18 48 PM" src="https://user-images.githubusercontent.com/88074487/178140757-ae416477-cfb5-4246-8b34-7a062caaf5dd.png">
+📍 이유를 알았다!ㅜ
+Number 메소드 자체에 숫자의 크기에 대한 제한이 있음
+
+✅ 다른 사람의 풀이
+```javascript
+var plusOne = function(digits) {
+    let l = digits.length - 1;
+    let r = 1;
+    
+    while(l>=0){
+        let added = digits[l]+r
+        r = added/10 >=1 ? 1:0
+        digits[l] = added%10;
+        l--;
+    }
+    if(r!==0) digits.unshift(1);
+    return digits
+
+}
+```
 
