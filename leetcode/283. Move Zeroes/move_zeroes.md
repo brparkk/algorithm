@@ -27,7 +27,7 @@ Output: [0]
  */
 var moveZeroes = function(nums) {
     function compareNums (a, b){
-      if(a ===0){
+      if(a===0){
         return 1
       }else if(b===0){
         return -1
