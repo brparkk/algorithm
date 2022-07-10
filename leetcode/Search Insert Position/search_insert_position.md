@@ -27,3 +27,19 @@ Constraints
 - -10<sup>4</sup> <= nums[i] <= 10<sup>4</sup>
 - nums contains distinct values sorted in ascending order.
 - -10<sup>4</sup> <= target <= 10<sup>4</sup>
+
+### Solution
+
+```javascript
+
+```
+
+### Note
+✅ 삽입정렬(Insertioni Sort)
+- 정의 : 왼쪽에서 오른쪽으로 가면서 각 요소들을 왼쪽과ㅗ 비교해서 알맞은 자리에 "삽입"한다.
+- 선택정렬은 모든 요소들을 스캔하는 반면, 삽입정렬은 필요한 요소들만 스캔한다. 
+- 그럼에도 불구하고 시간복잡도는 O(n^2)이다.
+- 그러나 평균적으로 최악의 경우에 이차 시간복잡도이고, best case인 경우 일차 시간복잡도를 가진다는 이점이 있다.
+<img width="655" alt="Screen Shot 2022-07-10 at 8 13 27 PM" src="https://user-images.githubusercontent.com/88074487/178142519-bdf8a8b8-7a64-4b9b-9be4-b049760f9592.png">
+- 장점 : 메모리 절약
+- stable한 정렬 : 중복 데이터는 위치를 교환하지 않는다.
