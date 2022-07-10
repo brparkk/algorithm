@@ -78,10 +78,11 @@ var plusOne = function(digits) {
 };
 ```
 Number로 제대로 전환이 안된다. 이유를 모르겠음
-<img width="458" alt="Screen Shot 2022-07-10 at 7 18 48 PM" src="https://user-images.githubusercontent.com/88074487/178140757-ae416477-cfb5-4246-8b34-7a062caaf5dd.png">
+<img width="458" alt="Screen Shot 2022-07-10 at 7 18 48 PM" src="https://user-images.githubusercontent.com/88074487/178140757-ae416477-cfb5-4246-8b34-7a062caaf5dd.png"><br/>
+
 📍 이유를 알았다!ㅜ
 Number 메소드 자체에 숫자의 크기에 대한 제한이 있음
-
+<img width="766" alt="Screen Shot 2022-07-10 at 9 39 23 PM" src="https://user-images.githubusercontent.com/88074487/178145245-1c40d074-9ef9-4c44-ab59-e9a05e2210d8.png"><br/><br/>
 ✅ 다른 사람의 풀이
 ```javascript
 var plusOne = function(digits) {
