@@ -31,7 +31,36 @@ Constraints
 ### Solution
 
 ```javascript
-
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+var searchInsert = function(nums, target) {
+    
+    if(nums.indexOf(target) !== -1){
+        return nums.indexOf(target)
+    }else{
+        if(nums.length ===1){
+            return target>nums[0] ? 1:0
+        }
+        
+        for(let i=1; i<nums.length; i++){
+            let cur = nums[i];
+            let left = i-1;
+            
+            if(target>nums[left] && target < cur){
+                    return nums.indexOf(cur)
+            }else if(target>nums[nums.length-1]){
+                return nums.length
+            }else if(target<=nums[left]){
+                return 0
+            }
+        }
+    }
+    
+    
+};
 ```
 
 ### Note
