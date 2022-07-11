@@ -47,11 +47,12 @@ Explanation: Same as Example 1, except with the 5 in the top left corner being m
 - board[i][j] is a digit 1-9 or '.'.
 
 ### Solutions
-- 접근방법
+- 접근방법<br/>
 (1) board[i] 배열 중복체크<br/>
 (2) board[i][j] 배열 중복체크<br/>
 (3) combo = board[i+2][j+2] 배열 중복체크<br/>
 
+1️⃣
 ```javascript
 /**
  * @param {character[][]} board
@@ -75,5 +76,30 @@ var isValidSudoku = function(board) {
             
         }
     }
+};
+```
+2️⃣
+```javascript
+/**
+ * @param {character[][]} board
+ * @return {boolean}
+ */
+var isValidSudoku = function(board) {
+    let map = {};
+    let cur = 0;
+
+    for(let i=0; i<9; i++){
+        for(let j=0; j<9; j++){
+            cur=board[i][j];
+            if(cur === ".") continue;
+            
+            if(map['i'+ i + cur] ||map['j' + j + cur]|| map['c' + Math.floor(i/3) + Math.floor(j/3) + cur]) return false;
+            map['i' + i + cur]=1;
+            map['j' + j + cur]=1;
+            map['c' + Math.floor(i/3) + Math.floor(j/3) + cur]=1;
+            
+        }
+    } //for문 종료
+    return true;
 };
 ```
