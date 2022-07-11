@@ -9,9 +9,9 @@
 스도쿠 보드(부분적으로 채워진)는 유효할 수 있지만 반드시 해결할 수 있는 것은 아닙니다.
 채워진 셀만 언급된 규칙에 따라 유효성을 검사하면 됩니다.
 
-## Example 1
+### Example 1
 ![Screen Shot 2022-07-11 at 10 20 20 PM](https://user-images.githubusercontent.com/88074487/178273586-8a857dac-9d03-4018-9e54-a707317e3ad4.png)
-
+#### (1)
 ```
 Input: board = 
 [["5","3",".",".","7",".",".",".","."]
@@ -25,6 +25,7 @@ Input: board =
 ,[".",".",".",".","8",".",".","7","9"]]
 Output: true
 ```
+#### (2)
 ```
 Input: board = 
 [["8","3",".",".","7",".",".",".","."]
@@ -39,8 +40,13 @@ Input: board =
 Output: false
 Explanation: Same as Example 1, except with the 5 in the top left corner being modified to 8. Since there are two 8's in the top left 3x3 sub-box, it is invalid.
 ```
-Constraints:
+### Constraints:
 
 - board.length == 9
 - board[i].length == 9
 - board[i][j] is a digit 1-9 or '.'.
+
+### Solutions
+```javascript
+
+```
