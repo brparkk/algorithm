@@ -47,6 +47,33 @@ Explanation: Same as Example 1, except with the 5 in the top left corner being m
 - board[i][j] is a digit 1-9 or '.'.
 
 ### Solutions
-```javascript
+- 접근방법
+(1)board[i] 배열 중복체크
+(2)board[i][j] 배열 중복체크
+(3)combo = board[i+2][j+2] 배열 중복체크
 
+```javascript
+/**
+ * @param {character[][]} board
+ * @return {boolean}
+ */
+var isValidSudoku = function(board) {
+    let i=1;
+    let j=1;
+    let ver=[];
+    let hor=[];
+    let combo=board[i+2][j+2];
+    
+    while(i<10){
+        ver = board[i]
+            const v_set = new Set(ver)
+            return !!ver.length !== v_set.size
+        hor = board[i][j]
+        while(j<10){
+            const h_set = new Set(hor)
+            return !!hor.length !== h_set.size
+            
+        }
+    }
+};
 ```
