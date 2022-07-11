@@ -104,8 +104,9 @@ var isValidSudoku = function(board) {
     return true;
 };
 ```
-map 객체의 고유한 키값에 각각 1을 할당하는데, 만약 중복된 값이 나오면 if문에서 걸러져서 return false가 된다.
-combo박스의 경우, 아래와 같이 9개가 1box라고 보면 된다.
+
+map 객체의 고유한 키값에 각각 1을 할당하는데, 만약 중복된 값이 나오면 if문에서 걸러져서 return false가 된다.<br/>
+combo박스의 경우, 아래와 같이 9개가 1box라고 보면 된다.<br/>
   c003: 1,
   c006: 1,
   c008: 1,
