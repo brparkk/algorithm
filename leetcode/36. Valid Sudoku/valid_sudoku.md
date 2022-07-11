@@ -48,9 +48,9 @@ Explanation: Same as Example 1, except with the 5 in the top left corner being m
 
 ### Solutions
 - 접근방법
-(1)board[i] 배열 중복체크
-(2)board[i][j] 배열 중복체크
-(3)combo = board[i+2][j+2] 배열 중복체크
+(1) board[i] 배열 중복체크<br/>
+(2) board[i][j] 배열 중복체크<br/>
+(3) combo = board[i+2][j+2] 배열 중복체크<br/>
 
 ```javascript
 /**
