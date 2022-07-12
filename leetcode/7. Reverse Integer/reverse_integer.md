@@ -56,8 +56,8 @@ const reverse = function(x){
     
     while(x!==0){
         last_digit = x%10;
-        rev = parseInt(x/10);
-        x = rev * 10 + last_digit;
+        x = parseInt(x/10);
+        rev = rev * 10 + last_digit;
         if(Math.abs(rev) > Math.pow(2, 31)) return 0;
     }
     return rev
