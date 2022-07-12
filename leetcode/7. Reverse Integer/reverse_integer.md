@@ -28,7 +28,7 @@ Output: 21
  * @param {number} x
  * @return {number}
  */
-var reverse = function(x) {
+const reverse = function(x) {
     const str=x.toString();
     const digit = str.length;
     let output;
@@ -46,3 +46,20 @@ var reverse = function(x) {
 };
 ```
 ✅ 다른사람의 풀이
+```javascript
+const reverse = n => (n < 0 ? -1 : 1) * +("" + Math.abs(n)).split``.reverse().join``;
+```
+```javascript
+const reverse = function(x){
+    let rev=0;
+    let last_digit=0;
+    
+    while(x!==0){
+        last_digit = x%10; 3
+        rev = parseInt(x/10); 12
+        x = rev * 10 + last_digit;
+        if(Math.abs(rev) > Math.pow(2, 31)) return 0;
+    }
+    return rev
+}
+```
