@@ -63,3 +63,6 @@ const reverse = function(x){
     return rev
 }
 ```
+<img width="550" alt="Screen Shot 2022-07-13 at 2 20 35 AM" src="https://user-images.githubusercontent.com/88074487/178553924-1cbecc4a-4059-4612-ab27-cedfbf665b6f.png">
+
+
