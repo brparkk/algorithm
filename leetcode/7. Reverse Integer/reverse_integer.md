@@ -23,7 +23,7 @@ Output: 21
 ```
 
 ### Solutions
-```
+```javascript
 /**
  * @param {number} x
  * @return {number}
@@ -45,3 +45,4 @@ var reverse = function(x) {
 
 };
 ```
+✅ 다른사람의 풀이
