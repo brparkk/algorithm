@@ -23,12 +23,27 @@ Explanation: There is no common prefix among the input strings.
 
 
 ### Solutions
+(1)
 ```javascript
 /**
  * @param {string[]} strs
  * @return {string}
  */
+const makeStringToArray = (s)=>{
+    if(!s) return false;
+    return s.split("")
+}
+let output;
+
 var longestCommonPrefix = function(strs) {
-    
+	strs.map((str, i)=>{
+        let curArr = makeStringToArray(str);
+        let nextArr = makeStringToArray(strs[i+1]);
+
+        if(nextArr){
+            output = curArr.filter(s => nextArr.includes(s));
+        }});
+    return output.join("");
 };
 ```
+(2)
