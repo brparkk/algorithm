@@ -1,7 +1,7 @@
 ## 문제
-Given a non-negative integer x, compute and return the square root of x.
-Since the return type is an integer, the decimal digits are truncated, and only the integer part of the result is returned.
-Note: You are not allowed to use any built-in exponent function or operator, such as pow(x, 0.5) or x ** 0.5.
+음이 아닌 정수 x가 주어지면 x의 제곱근을 계산하고 반환합니다.
+리턴 타입이 정수이기 때문에 소수점 이하 자릿수는 잘리고 결과의 정수 부분만 리턴됩니다.
+참고: pow(x, 0.5) 또는 x ** 0.5와 같은 내장 지수 함수 또는 연산자를 사용할 수 없습니다.
 
 ### Example 1:
 ```
