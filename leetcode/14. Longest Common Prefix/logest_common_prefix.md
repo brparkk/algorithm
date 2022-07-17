@@ -63,3 +63,6 @@ var longestCommonPrefix = function(strs) {
     return prefix;
 };
 ```
+indexOf가 -1이면 일치하는 Prefix가 없어서 뒤에서부터 하나씩 잘라내는 방법이다.<br/>
+그렇게 반복하다가 indexOf가 0이 되면 비로소 prefix를 검출한다.
+
