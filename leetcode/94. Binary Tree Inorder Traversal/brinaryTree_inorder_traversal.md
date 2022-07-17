@@ -106,3 +106,5 @@ var inorderTraversal = function(root) {
     return solution;
 };
 ```
+![IMG_0211](https://user-images.githubusercontent.com/88074487/179390744-11bba04f-fa20-4729-acc4-25cabf990496.JPG)
+![IMG_0212](https://user-images.githubusercontent.com/88074487/179390757-b5d28133-4fcb-467e-9ee1-6d1f5363be23.JPG)
