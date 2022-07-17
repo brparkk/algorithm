@@ -35,6 +35,8 @@
 ### Example 1
 <img width="182" alt="Screen Shot 2022-07-17 at 4 32 02 PM" src="https://user-images.githubusercontent.com/88074487/179388591-3d92dfc1-dcb1-4abb-a55f-69c4fd289f7c.png">
 <br/>
+
+
 ```
 Input: root = [1,null,2,3]
 Output: [1,3,2]
