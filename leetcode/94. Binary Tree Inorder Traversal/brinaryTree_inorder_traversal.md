@@ -65,5 +65,44 @@ Output: [1]
 
 ### Solutions
 ```javascript
-
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+var inorderTraversal = function(root) {
+    let tourist = root; //root를 참조하는 거지 복사한게 아님.
+    let solution=[];
+    
+    while(tourist !== null){//투어리스트가 길을 잃기 전까지 계속함
+        let guide = tourist.left; //가이드는 왼쪽 서브 루트로 이동을 안내함
+        
+        if(tourist.left !== null){
+            while(guide.right !== null && guide.right !== tourist){
+                //가이드의 오른쪽이 없거나 가이드의 오른쪽이 투어리스트와 같지 않을 때
+                guide = guide.right;
+            }
+            if(guide.right === null){
+                //오른쪽으로 더 이상 갈 수 없을 때 브릿지 생성
+                guide.right = tourist;
+                tourist = tourist.left;
+            }else {
+                guide.right = null;
+                solution.push(tourist.val); //브릿지 파괴
+                tourist = tourist.right;
+            }
+        }else {
+            solution.push(tourist.val);
+            tourist = tourist.right;
+        }   
+    }
+    return solution;
+};
 ```
