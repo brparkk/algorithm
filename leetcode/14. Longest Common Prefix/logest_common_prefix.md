@@ -23,7 +23,7 @@ Explanation: There is no common prefix among the input strings.
 
 
 ### Solutions
-(1)
+(1)오답
 ```javascript
 /**
  * @param {string[]} strs
@@ -46,4 +46,20 @@ var longestCommonPrefix = function(strs) {
     return output.join("");
 };
 ```
-(2)
+(2)다시 푼 풀이
+```javascript
+/**
+ * @param {string[]} strs
+ * @return {string}
+ */
+var longestCommonPrefix = function(strs) {
+    let prefix = strs[0]; //ex. "flower"
+    
+    for(let i=1; i<strs.length; i++){
+        while(strs[i].indexOf(prefix) !== 0){
+            prefix = prefix.substring(0, prefix.length -1)
+        }
+    }
+    return prefix;
+};
+```
