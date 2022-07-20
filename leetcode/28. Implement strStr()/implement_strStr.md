@@ -24,6 +24,14 @@ Output: -1
 - haystack and needle consist of only lowercase English characters.
 
 ### Solutions
+✅ two pointer 문제
+[투포인터 알고리즘]
+- 말 그대로 포인터가 2개이다.
+- 2개의 포인터를 지정하고 그 간격을 계속해서 좁혀나가면서 값을 도출해나가는 방식이다.
+- https://github.com/WooVictory/Ready-For-Tech-Interview/blob/master/Algorithm/%ED%88%AC%ED%8F%AC%EC%9D%B8%ED%84%B0%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98.md
 ```javascript
+
+```
+```python
 
 ```
