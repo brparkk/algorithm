@@ -29,8 +29,40 @@ Output: -1
 - 말 그대로 포인터가 2개이다.
 - 2개의 포인터를 지정하고 그 간격을 계속해서 좁혀나가면서 값을 도출해나가는 방식이다.
 - https://github.com/WooVictory/Ready-For-Tech-Interview/blob/master/Algorithm/%ED%88%AC%ED%8F%AC%EC%9D%B8%ED%84%B0%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98.md
-```javascript
 
+```javascript
+/**
+ * @param {string} haystack
+ * @param {string} needle
+ * @return {number}
+ */
+var strStr = function(haystack, needle) {
+    const len = haystack.length;
+    const arrHay = haystack.split("");
+    const arrNeedle = needle.split("");
+    
+    let s = 0;
+    let e = len - s - 1;
+    let res = 0;
+    
+        for(let i=0; i<needle.length; i++;){
+        if(needle[i] === haystack[s]){
+            res++;
+            s++;
+        }else{
+            s++;
+        }
+        
+        if(needle[i] === haystack[e]){
+            res++;
+            e--;
+        }else{
+            e--;
+        }
+
+        }
+        
+};
 ```
 ```python
 
