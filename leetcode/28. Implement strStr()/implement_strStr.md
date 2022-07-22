@@ -37,31 +37,42 @@ Output: -1
  * @return {number}
  */
 var strStr = function(haystack, needle) {
-    const len = haystack.length;
-    const arrHay = haystack.split("");
-    const arrNeedle = needle.split("");
-    
+    const len = haystack.length;    
     let s = 0;
     let e = len - s - 1;
     let res = 0;
     
-        for(let i=0; i<needle.length; i++;){
-        if(needle[i] === haystack[s]){
-            res++;
-            s++;
-        }else{
-            s++;
+    while(s<=e){  
+        if(needle.indexOf(haystack[s]) !== -1 || needle.indexOf(haystack[e]) !== -1){
+            res ++;
         }
+        needle.slice(s+1, e);
+        s++;
         
-        if(needle[i] === haystack[e]){
-            res++;
-            e--;
-        }else{
-            e--;
-        }
+        if(needle.length === 0 && res === 0) return -1;
+    }
 
-        }
+    return res 
         
+};
+```
+```javascript
+/**
+ * @param {string} haystack
+ * @param {string} needle
+ * @return {number}
+ */
+var strStr = function(haystack, needle) {
+    if(!needle.length) return 0;
+    let resIdx = -1;
+    
+    for(let i=0; i<haystack.length; i++){
+        if(haystack[i] === needle[0]){
+            let tmp = haystack.substring(i, i+needle.length);
+            if(tmp === needle) return i;
+        }
+    }
+    return -1;
 };
 ```
 ```python
