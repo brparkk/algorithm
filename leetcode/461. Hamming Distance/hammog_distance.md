@@ -31,6 +31,24 @@ Output: 1
  * @return {number}
  */
 var hammingDistance = function(x, y) {
+    let bx = x.toString(2);
+    let by = y.toString(2);
+    let res = 0;
+    let sub = bx.length - by.length
     
+    for(let i = 1; i<=Math.abs(sub); i++){
+        if(sub>0){
+          by = '0' + by
+        }else{
+          bx = '0' + bx
+        }
+    }
+    
+    for(let i=bx.length-1; i>=0; i--){
+        if(bx[i] !== by[i]){
+          ++res;
+        }
+    }
+    return res;
 };
 ```
