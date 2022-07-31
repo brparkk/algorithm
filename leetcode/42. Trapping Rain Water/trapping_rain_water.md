@@ -22,6 +22,7 @@ Output: 9
 - 0 <= height[i] <= 10<sup>5</sup>
 
 ### Solutions
+❗️ run time error
 ```javascript
 /**
  * @param {number[]} height
@@ -60,7 +61,8 @@ var trap = function(height) {
     
 };
 ```
-
+(1) using two pointer
+(2) using stack
 ```python
 
 ```
