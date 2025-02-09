@@ -54,7 +54,7 @@ function solution(arr) {
 function solution(numbers){
     let newArr = [];
     for(let i = 0; i< numbers.length; i++){
-        for(let j =i+1; j<numbers.length; j++){
+        for(let j =0; j<i; j++){
             newArr.push(numbers[i] + numbers[j]);    
         }
     }
