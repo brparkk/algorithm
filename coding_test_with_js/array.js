@@ -152,3 +152,49 @@ function _solution(answers) {
 
   return highScore;
 }
+
+/**
+ * ### 문제 05. 행렬의 곱셈
+ * 2차원 행렬 arr1과 arr2를 입력받아 arr1에 arr2를 곱한 결과를 반환하는 solution() 함수를 구현하세요.
+ *
+ * # 제약 조건
+ *   - arr1, arr2 의 행과 열의 길이는 2이상 100 이하입니다.
+ *   - arr1, arr2의 데이터는 -10이상 20이하인 자연수입니다.
+ *   - 곱할 수 있는 배열만 주어집니다.
+ */
+
+function solutions(arr1, arr2) {
+  const row1 = arr1.length;
+  const col1 = arr1[0].length;
+  const row2 = arr2.length;
+  const col2 = arr2[0].length;
+
+  const result = [];
+  for (let i = 0; i < row1; i++) {
+    result.push(new Array(col2).fill(0));
+  }
+
+  for (let i = 0; i < row1; i++) {
+    for (let j = 0; j < col2; j++) {
+      for (let k = 0; k < col1; k++) {
+        result[i][j] += arr1[i][k] * arr2[k][j];
+      }
+    }
+  }
+
+  return result;
+}
+
+// console.log(
+//   solutions(
+//     [
+//       [1, 4],
+//       [3, 2],
+//       [4, 1],
+//     ],
+//     [
+//       [3, 3],
+//       [3, 3],
+//     ]
+//   )
+// );
