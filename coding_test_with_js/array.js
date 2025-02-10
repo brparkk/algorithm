@@ -100,8 +100,7 @@ function getAnswerCount(answers, student_solutions) {
   }, 0);
 }
 
-const getKeyByValue = (object, value) =>
-  Object.entries(object).find(([_, v]) => v === value)?.[0];
+const getKeyByValue = (object, value) => Object.entries(object).find(([_, v]) => v === value)?.[0];
 
 function solution(answers) {
   const count_A = getAnswerCount(answers, STUDENT_A);
@@ -271,4 +270,3 @@ function solution(dirs) {
 }
 
 console.log(solution("ULURRDLLJ"));
-// console.log(solution("LULLLLLU"));
