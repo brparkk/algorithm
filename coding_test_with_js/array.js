@@ -100,7 +100,8 @@ function getAnswerCount(answers, student_solutions) {
   }, 0);
 }
 
-const getKeyByValue = (object, value) => Object.entries(object).find(([_, v]) => v === value)?.[0];
+const getKeyByValue = (object, value) =>
+  Object.entries(object).find(([_, v]) => v === value)?.[0];
 
 function solution(answers) {
   const count_A = getAnswerCount(answers, STUDENT_A);
@@ -199,16 +200,15 @@ function solutions(arr1, arr2) {
 //   )
 // );
 
-
 /**
  * ### 문제 07. 방문 길이
- * 
+ *
  * 게임 캐릭터를 4가지 명령어를 통해 움직이려 한다.
  * U : 위로 한칸
  * D : 아래로 한칸
  * R : 오른쪽으로 한칸
  * L : 왼쪽으로 한칸
- * 
+ *
  * 캐릭터는 (0,0) 위치에서 시작한다.
  * 갈 수 있는 최대 지점은 (-5, 5), (-5, -5), (5, 5), (5, -5)
  * 매개변수 dirs로 주어질 떄 게임 캐릭터가 처음 걸어본 길의 길이를 구해 반하는 solution 함수를 구현하세요.
@@ -217,47 +217,58 @@ function solutions(arr1, arr2) {
  *  - 좌표평면의 경계를 넘어가는 명령어도 무시한다.
  *  - dirs는 string형으로 주어지며 'U', 'D', 'R', 'I'이외 문자는 주어지지 않는다.
  *  - dirs의 길이는 500이하의 자연수
- * 
+ *
  * ex. dirs = 'ULURRDLLJ', answer = 7
  */
 
 /**
- * @param {string} dirs 
+ * @param {string} dirs
  * U: y + 1
  * D: y -1
  * R: x -1
  * L: x + 1
  */
-const direction_keys = ['U', 'D', 'R', 'L'];
 
-const keyMapping = (dir, x, y) => {
-  switch (dir) {
-    case 'U':
-      y + 1;
-      break;
-    case 'D':
-      y - 1;
-      break;
-    case 'R':
-      x - 1;
-      break
-    case 'L':
-      x + 1;
-      break;
-    default:
-      null
-  }
-}
+// 🖍️ 여기서 포인트 : Set을 사용하여 중복을 제거하고, Set의 size를 이용하여 길이를 구한다.
 
 function solution(dirs) {
-  const directions = dirs.split('');
-  const [x, y] = [0, 0] // 좌표
+  const directions = dirs.split("");
+  let x = 0;
+  let y = 0;
+  const visited = new Set();
 
-  for (const [i, dir] of directions.entries()) {
-    keyMapping(dir, x, y)
+  for (const direction of directions) {
+    let nx = x;
+    let ny = y;
+
+    switch (direction) {
+      case "U":
+        ny += 1;
+        break;
+      case "D":
+        ny -= 1;
+        break;
+      case "R":
+        nx += 1;
+        break;
+      case "L":
+        nx -= 1;
+        break;
+    }
+
+    if (nx < -5 || nx > 5 || ny < -5 || ny > 5) {
+      continue;
+    }
+
+    visited.add(`${x}${y}${nx}${ny}`);
+    visited.add(`${nx}${ny}${x}${y}`);
+    console.log(visited, "visited");
+    x = nx;
+    y = ny;
   }
 
-  console.log(x, y, "<<<<?")
+  return Math.floor(visited.size / 2);
 }
 
-console.log(solution('ULURRDLLJ'))
+console.log(solution("ULURRDLLJ"));
+// console.log(solution("LULLLLLU"));
