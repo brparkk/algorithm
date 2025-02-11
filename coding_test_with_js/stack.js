@@ -31,11 +31,9 @@ function solution(s) {
     }
 
     if (par === ")") {
-      stack.pop();
+      stack.length === 0 ? false : stack.pop();
     }
   }
-
-  console.log(stack);
 
   return stack.length === 0;
 }
