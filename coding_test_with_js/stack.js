@@ -38,4 +38,26 @@ function solution(s) {
   return stack.length === 0;
 }
 
-console.log(solution("((())()"));
+// console.log(solution("((())()"));
+
+/**
+ * ### 문제 02. 10진수를 2진수로 변환하기
+ * 10진수를 입력받아, 2진수로 반환하는 soluton 함수를 구현하세요.
+ *
+ * # 제약 조건
+ *   - decimal은 1이상 10억 미만의 자연수
+ * 예)
+ */
+
+function solution(decimals) {
+  const binary = [];
+
+  while (decimals > 0) {
+    binary.push(decimals % 2);
+    decimals = Math.floor(decimals / 2);
+  }
+
+  return binary.reverse().join("");
+}
+
+console.log(solution(27));
