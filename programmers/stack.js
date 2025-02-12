@@ -120,7 +120,7 @@ function solution(s) {
   return answer;
 }
 
-console.log(solution("[](){}"));
+// console.log(solution("[](){}"));
 
 /**
  * https://school.programmers.co.kr/learn/courses/30/lessons/12973?language=javascript
@@ -152,4 +152,20 @@ function solution(s) {
   }
 
   return arr.length < 1 ? 1 : 0;
+}
+
+// stack으로 푼 풀이
+function _solution(s) {
+  const stack = [];
+
+  for (const c of s) {
+    // stack에 가장 최근에 쌓은 항목과 현재 항목이 같다면 pop
+    if (stack.length > 0 && stack[stack.length - 1] === c) {
+      stack.pop(); // stack의 맨 위 문자 제거
+    } else {
+      stack.push(c); // stack에 현재 문자 추가
+    }
+  }
+
+  return stack.length === 0 ? 1 : 0;
 }
